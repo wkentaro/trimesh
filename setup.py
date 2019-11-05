@@ -18,16 +18,16 @@ if os.path.exists('README.md'):
 # "easy" requirements should install without compiling
 # anything on Windows, Linux, and Mac, for Python 2.7-3.4+
 requirements_easy = set([
-    'lxml',      # handle XML better and faster than built- in XML
-    'pyglet',    # render preview windows nicely
-    'shapely',   # handle 2D polygons robustly
-    'rtree',     # create N- dimension trees for broad- phase queries
-    'svg.path',  # handle SVG format path strings
-    'sympy',     # do analytical math
-    'msgpack',   # serialize into msgpack
-    'pillow',    # load images
-    'requests',  # do network requests
-    'xxhash',    # hash ndarrays faster than built-in MD5/CRC
+    'lxml',          # handle XML better and faster than built- in XML
+    'pyglet',        # render preview windows nicely
+    'shapely',       # handle 2D polygons robustly
+    'rtree',         # create N- dimension trees for broad- phase queries
+    'svg.path<4.0',  # handle SVG format path strings
+    'sympy',         # do analytical math
+    'msgpack',       # serialize into msgpack
+    'pillow',        # load images
+    'requests',      # do network requests
+    'xxhash',        # hash ndarrays faster than built-in MD5/CRC
     'setuptools',  # do setuptools stuff
     'pycollada',   # parse collada/dae/zae files
     'colorlog'])   # log in pretty colors
@@ -79,7 +79,7 @@ setup(name='trimesh',
                                 'resources/*.json']},
       install_requires=['numpy',
                         'scipy',
-                        'networkx'],
+                        'networkx<2.4'],
       extras_require={'test': ['pytest',
                                'pytest-cov',
                                'pyinstrument',
